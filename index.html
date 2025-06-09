@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Labor Report Web App</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-4">
+  <div class="max-w-5xl mx-auto bg-white rounded-2xl shadow p-6">
+    <h1 class="text-2xl font-bold mb-4">Labor Report Web App</h1>
+
+    <!-- File Upload -->
+    <div class="mb-4">
+      <label class="block font-semibold mb-2">Upload Report (CSV/XML):</label>
+      <input type="file" id="fileInput" class="border p-2 rounded w-full">
+    </div>
+
+    <!-- Table -->
+    <div class="overflow-x-auto mb-4">
+      <table class="table-auto w-full border-collapse border" id="dataTable">
+        <thead>
+          <tr class="bg-gray-200" id="tableHead"></tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="flex space-x-4">
+      <button id="generatePdfBtn" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Generate PDF</button>
+      <button id="sendEmailBtn" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Send Email</button>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
